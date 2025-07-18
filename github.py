@@ -1,6 +1,3 @@
-# Copyright (c) Microsoft. All rights reserved.
-
-
 import httpx
 from pydantic import BaseModel, Field
 
