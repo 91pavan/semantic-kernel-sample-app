@@ -1,5 +1,6 @@
 from typing import Annotated
 from semantic_kernel.functions import kernel_function
+from ioa_observe.sdk.decorators import tool
 
 class LightsPlugin:
     lights = [
@@ -12,6 +13,10 @@ class LightsPlugin:
         name="get_lights",
         description="Gets a list of lights and their current state",
     )
+    @tool(
+        name="get_state",
+        description="Get the current state of all lights",
+    )
     def get_state(
         self,
     ) -> str:
@@ -21,6 +26,10 @@ class LightsPlugin:
     @kernel_function(
         name="change_state",
         description="Changes the state of the light",
+    )
+    @tool(
+        name="change_light_state",
+        description="Change the state of a specific light by ID",
     )
     def change_state(
         self,
