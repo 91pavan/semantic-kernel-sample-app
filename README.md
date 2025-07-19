@@ -29,14 +29,22 @@ export OTLP_HTTP_ENDPOINT=https://your-otel-collector-http-endpoint
 
 ## Running the Scripts
 
-### 1. Code Interpreter Agent
+### 1. Multi-Agent A2A System
+
+To run the multi-agent system, navigate to the `multi_agent_a2a` directory and use the launcher script:
+```bash
+cd multi_agent_a2a
+python launcher.py
+```
+
+### 2. Code Interpreter Agent
 
 To run the code interpreter agent:
 ```bash
 python code_interpreter.py
 ```
 
-### 2. GitHub Agent
+### 3. GitHub Agent
 
 To run the GitHub agent:
 ```bash
